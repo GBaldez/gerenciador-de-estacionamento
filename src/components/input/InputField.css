@@ -1,7 +1,6 @@
 .input {
     display: flex;
     width: 95%;
-    position: relative;
     align-items: center;
 }
 .input__box {
@@ -23,7 +22,7 @@
     height: 3rem;
     margin: 1rem;
     border-radius: 50%;
-    right: 0%;
+    right: 2px;
     border:none;
     font-size: 1rem;
     background-color: #2f74c0;

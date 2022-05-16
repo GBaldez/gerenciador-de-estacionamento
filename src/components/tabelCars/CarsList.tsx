@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useRef } from "react";
+import React from "react";
+import './CarsList.css'
 
 interface Car {
   car: string;
@@ -32,7 +32,7 @@ const CarsList: React.FC<props> = ({
                 <tr key={car.license}>
                     <td>{car.car}</td>
                     <td>{car.license}</td>
-                    <td>{car.date.toLocaleDateString()}</td>
+                    <td>{car.date.toUTCString()}</td>
                     <td>  <button onClick={() => handleDelete(car.license)}>Remover</button></td>
                 </tr>
             ))}
