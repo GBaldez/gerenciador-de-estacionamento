@@ -19,6 +19,7 @@ const CarsList: React.FC<props> = ({
   const handleDelete = (license: string) => {
     setCars(cars.filter((car) => car.license !== license ));
   };
+ 
   return (
     <table>
         <thead>
@@ -28,6 +29,8 @@ const CarsList: React.FC<props> = ({
                 <th>Entrance</th>
                 <th>Actions</th>
             </tr>
+        </thead>
+        <tbody>
             {cars?.map((car) => (
                 <tr key={car.license}>
                     <td>{car.car}</td>
@@ -36,7 +39,7 @@ const CarsList: React.FC<props> = ({
                     <td>  <button onClick={() => handleDelete(car.license)}>Remover</button></td>
                 </tr>
             ))}
-        </thead>
+        </tbody>
     </table>
   );
 };
